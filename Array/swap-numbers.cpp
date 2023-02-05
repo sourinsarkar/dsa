@@ -15,7 +15,7 @@ void swap_usingReference(int *a, int *b)
     int temp = *a;
     *a = *b;
     *b = temp;
-}
+}   
 
 void swap_usingArithmeticOp(int a, int b)
 {
@@ -74,23 +74,23 @@ void swap_oneLiner(int a, int b) {
 
 int main()
 {
-    // int a, b;
-    // cout << "Enter two elements: ";
-    // cin >> a >> b;
+    int a, b;
+    cout << "Enter two elements: ";
+    cin >> a >> b;
 
     // swap_usingTemp(a,b);
-    // swap_usingReference(&a, &b);
+    swap_usingReference(&a, &b);
 
-    // cout << "Solution by reference: A: " << a  << ", B: " << b << '\n';
+    cout << "Solution by reference: A: " << a  << ", B: " << b << '\n';
 
     // swap(a,b);
     // cout << "Solution by swap function: A: " << a  << ", B: " << b << '\n';
 
     // swap_usingFF obj(1, 2);
-    // swap_ff(obj);
+    // swap_ff(obj); 
 
-    int a = 1, b = 3;
-    swap_oneLiner(a,b);
+    // int a = 1, b = 3;
+    // swap_oneLiner(a,b);
 
     return 0;
 }
