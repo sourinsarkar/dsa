@@ -25,7 +25,5 @@ int main() {
     // cout << "\nCurrent elements in the array: " << size << '\n';
     cout << "\nMax Size: " << maxsize << '\n';
 
-    
-
     return 0;
 }
