@@ -79,9 +79,10 @@ int main()
     cin >> a >> b;
 
     // swap_usingTemp(a,b);
-    swap_usingReference(&a, &b);
+    swap_usingXOR(a, b);
+    // swap_usingReference(&a, &b);
 
-    cout << "Solution by reference: A: " << a  << ", B: " << b << '\n';
+    // cout << "Solution by reference: A: " << a  << ", B: " << b << '\n';
 
     // swap(a,b);
     // cout << "Solution by swap function: A: " << a  << ", B: " << b << '\n';
