@@ -58,13 +58,9 @@ public:
 
 void swap_ff(swap_usingFF &x)
 {
-    cout << "Before swap: A: " << x.a << ", B: " << x.b << '\n';
-
     x.temp = x.a;
     x.a = x.b;
     x.b = x.temp;
-
-    cout << "After swap: A: " << x.a << ", B: " << x.b << '\n';
 }
 
 void swap_oneLiner(int a, int b) {
@@ -95,3 +91,4 @@ int main()
 
     return 0;
 }
+

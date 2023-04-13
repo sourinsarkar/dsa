@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <climits>
+#include <bits/stdc++.h>
 using namespace std;
 
 // (1) Pattern ------------------------------------------
@@ -569,12 +570,12 @@ using namespace std;
 //         ans = (bit * round(pow(10, i))) + ans;
 //         n = n >> 1;
 //         i++;
-//     }    
+//     }
 
 //     cout << ans << '\n';
 
 //     return 0;
-// }    
+// }
 
 // Binary to Decimal --------------------------------
 
@@ -624,7 +625,7 @@ using namespace std;
 // int main() {
 //     int n;
 //     cin >> n;
-    
+
 //     revInt(n);
 
 //     return 0;

@@ -21,7 +21,7 @@ void swapThree(int &a, int &b, int &c) {
 }
 
 void rearrangeArray(int poo[], int n) {
-    if(n % 2 == 0) { // 1 pe even | 0 pe odd
+    if(n % 2 == 0) { // 1 pe odd | 0 pe even
         for(int i = 0; i < n - 1; i+=2) {
             swapTwo(poo[i], poo[i + 1]);
         }
