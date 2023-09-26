@@ -3,21 +3,23 @@
 #include <limits.h>
 using namespace std;
 
-void selectionSort(int arr[], int n)
+// Simple rule: Store indexes and not the values
+
+// void selectionSort(int arr[], int n)
+void selectionSort(int* arr, int n)
 {
     for (int i = 0; i <= n - 2; i++)
     {
-        int smallest = INT_MAX;
+        int smallest = i;
+
         for (int j = i + 1; j <= n - 1; j++)
         {
-            if(arr[j] < smallest) {
-                smallest = arr[j];
+            if(arr[j] < arr[smallest]) {
+                smallest = j;
             }
         }
 
-        if(arr[i] > smallest) {
-            swap(arr[j], arr[i]);
-        }
+        swap(arr[i], arr[smallest]);
     }
 }
 
@@ -28,7 +30,7 @@ int main()
     cout << "Enter the number of elements: ";
     cin >> n;
 
-    int arr[n];
+    int* arr = new int[n];
 
     cout << "Enter all the elements: ";
     for (int i = 0; i < n; i++)
@@ -42,4 +44,6 @@ int main()
     {
         cout << arr[i] << ' ';
     }
+
+    delete[] arr;
 }
