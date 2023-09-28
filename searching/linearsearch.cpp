@@ -14,7 +14,7 @@ int main() {
 
     while(size--) {
         if(arr.at(i) == value) {
-            cout << "Present";
+            cout << "Present at " << i+1 << " position.";
             found = true;
             break;
         }
