@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 int main()
 { 
     std::vector<int> v1;
@@ -42,6 +44,43 @@ int main()
         std::cout << v2->at(i) << ' ';
     }
     std::cout << '\n';
+
+    delete v2;
+
+    // -----------------------------------------------
+
+    int n;
+    cout << "How many you want to insert: ";
+    cin >> n;
+
+    // vector<int> fooV(n);
+    vector<int> fooV;
+
+    for(int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        // fooV.push_back(x);
+
+        // ----------------------------
+
+        // fooV.insert(fooV.end(), x);
+
+        // ----------------------------
+
+        // cin >> fooV.at(i);
+
+        // ----------------------------
+
+        // cin >> fooV[i];
+
+        // ---------------------------- 
+
+        fooV.emplace_back(x);
+    }
+
+    for(int i = 0; i < fooV.size(); i++) {
+        cout << fooV.at(i) << ' ';
+    }
 
     return 0;
 }
