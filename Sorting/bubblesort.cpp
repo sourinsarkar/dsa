@@ -32,6 +32,8 @@ int main()
         cin >> fooV.at(i);
     }
 
+    int size = fooV.size();
+
     bubbleSort(fooV);
 
     for(int i = 0; i < n; i++) {
