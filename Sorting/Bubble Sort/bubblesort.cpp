@@ -14,10 +14,10 @@ void bubbleSort(vector<int>& fooV) {
                 flag = 1;
             }
         }
-
+        
         if(flag == 0) {
             break;
-        } 
+        }
     }
 }
 
