@@ -11,7 +11,7 @@ int countDigits(long long int n) {
 }
 
 int main() {
-    cout << countDigits(6344322324);    
+    cout << countDigits(6344322324);
  
     return 0;
 }
