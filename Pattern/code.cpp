@@ -84,16 +84,55 @@ void pattern_5(int n) {
     cout << '\n';
 }
 
+void pattern_6(int n) {
+
+    // 1234
+    // 123
+    // 12
+    // 1
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 1; j <= n - i; j++) {
+            cout << j << ' ';
+        }
+        cout << '\n';
+    }
+    cout << '\n';
+}
+
+void pattern_7(int n) {
+
+    //   *
+    //  ***
+    // *****
+
+    for(int i = 0; i < n; i++) {
+
+        // Print spaces
+        for(int j = 0; j < n - i - 1; j++) {
+            cout << ' ';
+        }
+
+        // Print asterisks
+        for(int j = 0; j < 2 * i + 1; j++) {
+            cout << '*';
+        }
+        cout << '\n';
+    }
+}
+
 int main() {
     int n;
     cout << "Enter size: ";
     cin >> n;
 
-    pattern_1(n);
-    pattern_2(n);
-    pattern_3(n);
-    pattern_4(n);
-    pattern_5(n);
+    // pattern_1(n);
+    // pattern_2(n);
+    // pattern_3(n);
+    // pattern_4(n);
+    // pattern_5(n);
+    // pattern_6(n);
+    pattern_7(n);
 
     return 0;
 }
