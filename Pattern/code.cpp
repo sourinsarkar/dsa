@@ -121,6 +121,26 @@ void pattern_7(int n) {
     }
 }
 
+void pattern_8(int n) {
+    // *****
+    //  ***
+    //   *
+
+    for(int i = n; i >= 1; i--) {
+
+        // spaces
+        for(int j = n; j > i; j--) {
+            cout << '-';
+        }
+
+        // asterisks
+        for(int j = 0; j < 2 * i - 1; j++) {
+            cout << '*';
+        }
+        cout << '\n';
+    }
+}
+
 int main() {
     int n;
     cout << "Enter size: ";
@@ -132,7 +152,8 @@ int main() {
     // pattern_4(n);
     // pattern_5(n);
     // pattern_6(n);
-    pattern_7(n);
+    // pattern_7(n);
+    pattern_8(n);
 
     return 0;
 }
