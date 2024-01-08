@@ -10,10 +10,13 @@ bool palindrome(long long n) {
         n /= 10;
     }
 
-    if(newNumber == originalNumber) {
-        return true;
-    }
-    return false;
+    // if(newNumber == originalNumber) {
+    //     return true;
+    // }
+    // return false;
+
+    // Optimised
+    return(newNumber == originalNumber);
 }
 
 int main() {
