@@ -13,7 +13,19 @@ int lcm(int n, int m) {
     return result;
 }
 
-//
+// Optimised Approach
+// This follows the formula: a * b = gcd(a, b) * lcm(a, b)
+
+int gcd(int n, int m) {
+    if(m == 0)
+        return n;
+    else
+        return gcd(m, n % m); 
+}
+
+int opt_lcm(int n, int m) {
+    return (n * m) / gcd(n, m);
+}
 
 int main() {
     int n, m;
@@ -21,5 +33,6 @@ int main() {
     cin >> n >> m;
 
     cout << lcm(n, m) << '\n';
+    cout << opt_lcm(n, m) << '\n';
     return 0;
 }
