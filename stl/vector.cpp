@@ -13,13 +13,24 @@ void topicVector() {
     vec_p.emplace_back("Some", "Thing");
 
     vector<int> v1(5, 100);  //Five times 100
-    vector<int> v1(5);  //Five 0 --compiler dependent
+    vector<int> v1_1(5);  //Five 0 --compiler dependent
 
     vector<int> v2(v1);
 
+    for(vector<pair<string, string>>::iterator it = vec_p.begin(); it != vec_p.end(); it++) {
+        cout << &(*it).first << ", " << &(*it).second << '\n';
+    }
+
+    // for(auto it = v1.begin(); it != v1.end(); it++) {
+    //     cout << *(it) << '\n';
+    // }
+
+        // cout << it.first << ", " << it.second << '\n';
+    for(auto it: vec_p) {
+        cout << &it.first << ", " << &it.second << '\n';
+    }
 }
 
 int main() {
     topicVector();
-
 }
