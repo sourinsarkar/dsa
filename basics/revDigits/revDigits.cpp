@@ -1,24 +1,18 @@
 #include <iostream>
-#include <bits/stdc++.h>
 
 using namespace std;
 
 // Way 1
-int countDigits(int n) {
-    int cnt = 0;
+int revDigits(int n) {
+    int revNumber = 0;
+
     while(n > 0) {
         int lastDigit = n % 10;
-        cnt += 1;
+        revNumber = (revNumber * 10) + lastDigit;
         n /= 10;
     }
 
-    return cnt;
-}
-
-// Way 2
-int countDigitsLog(int n) {
-    int cnt = (int)(log10(n) + 1);
-    return cnt;
+    return revNumber;
 }
 
 int main() {
@@ -30,6 +24,5 @@ int main() {
     cout << "Entered value is: " << n << '\n';
     cout << "Answer:- " << '\n';
 
-    cout << countDigits(n) << '\n';
-    cout << countDigitsLog(n) << '\n';
+    cout << revDigits(n) << '\n';
 }
