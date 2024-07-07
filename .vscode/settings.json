@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp"
     }
 }
