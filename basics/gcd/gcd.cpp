@@ -15,12 +15,24 @@ int gcd(int n, int m) {
     return gcd;
 }
 
+int gcd2(int n, int m) {
+    while(n > 0 && m > 0) {
+        if (n > m) n = n % m;
+        else m = m % n;
+    }
+
+    if(n == 0) return m;
+    return n;
+}
+
 int main() {
     int n, m;
     cout << "Enter two numbers: ";
     cin >> n >> m;
 
     cout << gcd(n, m);
+    cout << '\n';
+    cout << gcd2(n, m);
 
     return 0;
 }
