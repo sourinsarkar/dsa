@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -17,12 +19,21 @@ void print_name2(int i, int count) {
     cout << "Sourin 2" << '\n';
     i++;
     print_name2(i, count);
+}
 
+void print_numbers(int i, int n) {
+    if(i > n) return;
+
+    cout << i << '\n';
+    i++;
+
+    print_numbers(i++, n);
 }
 
 int main() {
     print_name("Sourin");
     cout << "\nAnother code: " << '\n';
     print_name2(0, 3);
+    print_numbers(1, 5);
     return 0;
 }
