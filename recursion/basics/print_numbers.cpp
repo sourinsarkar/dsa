@@ -10,7 +10,6 @@ void print_name(string name, int count = 0) {
 
     cout << name << '\n';
     print_name(name, count);
-
 }
 
 void print_name2(int i, int count) {
