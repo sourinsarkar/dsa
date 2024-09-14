@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool isPalindrome(int i, string name) {
+bool isPalindrome(int i, string& name) {
     int n = name.length();
 
     if(i >= n / 2) return true;
