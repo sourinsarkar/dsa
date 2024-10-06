@@ -20,6 +20,13 @@ void print_name2(int i, int count) {
     print_name2(i, count);
 }
 
+void rev_print_name(int i, int count) {
+    if(i == count) return;
+    cout << "Maker" << '\n';
+    i++;
+    rev_print_name(i, count);
+}
+
 void print_numbers(int i, int n) {
     if(i > n) return;
 
@@ -27,6 +34,14 @@ void print_numbers(int i, int n) {
     i++;
 
     print_numbers(i++, n);
+}
+
+void rev_print_numbers(int i, int n) {
+    if(i == n) return;
+
+    cout << i << '\n';
+    i++;
+    rev_print_numbers(i, n);
 }
 
 void print_numbers_reverse(int i, int n) {
@@ -47,13 +62,19 @@ void print_numbers_reverse2(int i, int n) {
 }
 
 int main() {
-    print_name("Sourin");
-    cout << "\nAnother code: " << '\n';
-    print_name2(0, 3);
-    print_numbers(1, 5);
-    cout << '\n';
-    print_numbers_reverse(5, 5);
-    cout << '\n';
-    print_numbers_reverse2(1, 5);
-    return 0;
+    // print_name("Sourin");
+    // cout << "\nAnother code: " << '\n';
+    // print_name2(0, 3);
+    // print_numbers(1, 5);
+    // cout << '\n';
+    // print_numbers_reverse(5, 5);
+    // cout << '\n';
+    // print_numbers_reverse2(1, 5);
+    // return 0;
+
+    // ----REVISE-----
+
+    // print_name("Maker");
+    // rev_print_name(0, 5);   
+    // rev_print_numbers(1, 5);   
 }
