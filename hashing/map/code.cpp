@@ -36,7 +36,7 @@ int main() {
     }
 
     for(auto i : mpp) {
-        cout << i.first << " -> " << i.second << '\n';X
+        cout << i.first << " -> " << i.second << '\n';
     }
     
     // for(int i = 0; i < v.size(); i++) {
