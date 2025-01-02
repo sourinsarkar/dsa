@@ -21,6 +21,18 @@ int countDigitsLog(int n) {
     return cnt;
 }
 
+// Way 3
+int countDigitsRecursive(int n) {
+    if(n / 10 == 0) return 1;
+    return 1 + countDigitsRecursive(n / 10);
+}
+
+// Way 4
+int countDigitsString(int n) {
+    string num = to_string(n);
+    return num.length();
+}
+
 int main() {
     int n;
 
@@ -32,4 +44,6 @@ int main() {
 
     cout << countDigits(n) << '\n';
     cout << countDigitsLog(n) << '\n';
+    cout << countDigitsRecursive(n) << '\n';
+    cout << countDigitsString(n) << '\n';
 }
