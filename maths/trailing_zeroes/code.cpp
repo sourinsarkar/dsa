@@ -21,12 +21,22 @@ int countZeroes(int n) {
 }
 
 // Way 2
+int countZeroesOn5(int n) {
+    int count = 0;
+
+    for(int i = 5; i <= n; i *= 5) {
+        count += n / i;
+    }
+
+    return count;
+}
 
 int main() {
     cout << "Enter a number: ";
     int input;
     cin >> input;
 
-    cout << countZeroes(input) << '\n';
+    // cout << countZeroes(input) << '\n'; // Commented out due to potential overflow
+    cout << countZeroesOn5(input) << '\n';
     return 0;
 }
